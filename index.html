@@ -229,90 +229,39 @@
             box-shadow: 0 20px 40px rgba(255, 107, 157, 0.2);
         }
         
-        /* Remove animations from the emoji div */
-.product-image {
-    width: 200px;
-    height: 200px;
-    background: linear-gradient(135deg, #ff9a9e, #fecfef);
-    border-radius: 15px;
-    margin: 0 auto 1.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 4rem;
-    /* Remove all animations and transitions */
-}
-
-.product-image::before {
-    /* Remove this entire pseudo-element */
-    display: none;
-}
-
-/* Add animations to your actual images */
-.product-card img {
-    width: 100%;
-    max-width: 200px;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 15px;
-    margin: 0 auto 1.5rem;
-    display: block;
-    transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
-}
-
-.product-card img::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: rgba(255, 255, 255, 0.3);
-    border-radius: 50%;
-    transition: all 0.4s ease;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-.product-card:hover img {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 15px 30px rgba(255, 107, 157, 0.3);
-}
-
-.product-card:hover img::before {
-    width: 300px;
-    height: 300px;
-}
-
-/* Additional hover effects for the image container */
-.product-card {
-    position: relative;
-    overflow: hidden;
-}
-
-.product-card::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 107, 157, 0.1), transparent);
-    transition: left 0.6s;
-    z-index: 2;
-}
-
-.product-card:hover::after {
-    left: 100%;
-}
-         
-
-
-
-
-
+        .product-card img {
+            width: 100%;
+            max-width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 0 auto 1.5rem;
+            display: block;
+            transition: all 0.4s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .product-card:hover img {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 15px 30px rgba(255, 107, 157, 0.3);
+        }
+        
+        .product-card::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 107, 157, 0.1), transparent);
+            transition: left 0.6s;
+            z-index: 2;
+        }
+        
+        .product-card:hover::after {
+            left: 100%;
+        }
         
         .product-name {
             font-size: 1.3rem;
@@ -489,16 +438,13 @@
             text-align: center;
         }
         
-        .profile-container img {
+        .profile-container .profile-image {
             width: 150px;
             height: 150px;
-            background: linear-gradient(135deg, #ff9a9e, #fecfef);
             border-radius: 50%;
             margin: 0 auto 2rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 4rem;
+            display: block;
+            object-fit: cover;
         }
         
         .floating-hearts {
@@ -542,7 +488,7 @@
     <div class="floating-hearts" id="floating-hearts"></div>
     
     <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/1234567890?text=Hi! I'm interested in your iPhone cases 💕" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/250794909806?text=Hi! I'm interested in your iPhone cases 💕" class="whatsapp-float" target="_blank">
         📱
     </a>
     
@@ -577,244 +523,53 @@
                 <h2 class="section-title">Our Gorgeous Collection</h2>
                 <div class="product-grid">
                     <div class="product-card">
-                        <img src="iphone 13.jpeg" alt="Iphone 13 & 14" style="width: px;%; border-radius:10px;">
-                        <h3 class="product-name">Iphone 13 & 14</h3>
+                        <img src="images/iphone 13.jpeg" alt="iPhone 13 & 14" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPmlQaG9uZSAxMyAmIDE0PC90ZXh0Pjwvc3ZnPg=='">
+                        <h3 class="product-name">iPhone 13 & 14</h3>
                         <p class="product-price">Rwf 6000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 13 & 14', 'Rwf 6000')">Order Now 💖</button>
+                        <button class="order-btn" onclick="orderProduct('iPhone 13 & 14', 'Rwf 6000')">Order Now 💖</button>
                     </div>
                     
                     <div class="product-card">
-                        <img src="iphone 12 pro max.jpeg" alt="Iphone 12 Pro Max" style="width: px;%; border-radius:10px;">
-                        <h3 class="product-name">Iphone 12 Pro Max</h3>
+                        <img src="images/iphone 12 pro max.jpeg" alt="iPhone 12 Pro Max" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPmlQaG9uZSAxMiBQcm8gTWF4PC90ZXh0Pjwvc3ZnPg=='">
+                        <h3 class="product-name">iPhone 12 Pro Max</h3>
                         <p class="product-price">Rwf 7000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 12 Pro Max', 'Rwf 7000')">Order Now 💖</button>
+                        <button class="order-btn" onclick="orderProduct('iPhone 12 Pro Max', 'Rwf 7000')">Order Now 💖</button>
                     </div>
                     
                     <div class="product-card">
-                        <img src="iphone 11 pro.jpeg" alt="Iphone 11 Pro" style="width: px;%; border-radius:10px;">
-                        <h3 class="product-name">Iphone 11 Pro</h3>
+                        <img src="images/iphone 11 pro.jpeg" alt="iPhone 11 Pro" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPmlQaG9uZSAxMSBQcm88L3RleHQ+PC9zdmc+'">
+                        <h3 class="product-name">iPhone 11 Pro</h3>
                         <p class="product-price">Rwf 6000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 11 Pro', 'Rwf 6000')">Order Now 💖</button>
+                        <button class="order-btn" onclick="orderProduct('iPhone 11 Pro', 'Rwf 6000')">Order Now 💖</button>
                     </div>
                     
                     <div class="product-card">
-                        <img src="iphone 11 pro max.jpeg" alt="Iphone 11 Pro Max" style="width: px;%; border-radius:10px;">
-                        <h3 class="product-name">Iphone 11 Pro Max</h3>
+                        <img src="images/iphone 11 pro max.jpeg" alt="iPhone 11 Pro Max" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPmlQaG9uZSAxMSBQcm8gTWF4PC90ZXh0Pjwvc3ZnPg=='">
+                        <h3 class="product-name">iPhone 11 Pro Max</h3>
                         <p class="product-price">Rwf 6000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 11 Pro Max', 'Rwf 6000')">Order Now 💖</button>
+                        <button class="order-btn" onclick="orderProduct('iPhone 11 Pro Max', 'Rwf 6000')">Order Now 💖</button>
                     </div>
                     
                     <div class="product-card">
-                        <img src="iphone x.jpeg" alt="Iphone X, XR & XS" style="width: px;%; border-radius:10px;"> 
-                        <h3 class="product-name">Iphone X, XR & XS</h3>
+                        <img src="images/iphone x.jpeg" alt="iPhone X, XR & XS" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPmlQaG9uZSBYLCBYUiAmIFhTPC90ZXh0Pjwvc3ZnPg=='"> 
+                        <h3 class="product-name">iPhone X, XR & XS</h3>
                         <p class="product-price">Rwf 6000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone X, XR & XS', 'Rwf 6000')">Order Now 💖</button>
+                        <button class="order-btn" onclick="orderProduct('iPhone X, XR & XS', 'Rwf 6000')">Order Now 💖</button>
                     </div>
-                     <div class="product-card">
-                        <img src="iphone xr.jpeg" alt="Iphone X, XR & XS" style="width: px;%; border-radius:10px;"> 
-                        <h3 class="product-name">Iphone X, XR & XS</h3>
+                    
+                    <div class="product-card">
+                        <img src="images/iphone xr.jpeg" alt="iPhone XR" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPmlQaG9uZSBYUjwvdGV4dD48L3N2Zz4='"> 
+                        <h3 class="product-name">iPhone XR</h3>
                         <p class="product-price">Rwf 6000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone X, XR & XS', 'Rwf 6000')">Order Now 💖</button>
+                        <button class="order-btn" onclick="orderProduct('iPhone XR', 'Rwf 6000')">Order Now 💖</button>
                     </div>
-                     <div class="product-card">
-                        <img src="iphone 12.jpeg" alt="Iphone 12" style="width: px;%; border-radius:10px;"> 
-                        <h3 class="product-name">Iphone 12</h3>
+                    
+                    <div class="product-card">
+                        <img src="images/iphone 12.jpeg" alt="iPhone 12" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPmlQaG9uZSAxMjwvdGV4dD48L3N2Zz4='"> 
+                        <h3 class="product-name">iPhone 12</h3>
                         <p class="product-price">Rwf 5000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 12', 'Rwf 5000')">Order Now 💖</button>
+                        <button class="order-btn" onclick="orderProduct('iPhone 12', 'Rwf 5000')">Order Now 💖</button>
                     </div>
-                     <div class="product-card">
-                        <img src="iphone 12 pro.jpeg" alt="Iphone 12 Pro" style="width: px;%; border-radius:10px;"> 
-                        <h3 class="product-name">Iphone 12 Pro</h3>
-                        <p class="product-price">Rwf 5000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 12 Pro', 'Rwf 5000')">Order Now 💖</button>
-                    </div>
-                     <div class="product-card">
-                        <img src="iphone 11(2).jpeg" alt="Iphone 11" style="width: px;%; border-radius:10px;"> 
-                        <h3 class="product-name">Iphone 11</h3>
-                        <p class="product-price">Rwf 5000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 11', 'Rwf 5000')">Order Now 💖</button>
-                    </div>
+                    
                     <div class="product-card">
-                        <img src="iphone 12(2).jpeg" alt="Iphone 12" style="width: px;%; border-radius:10px;"> 
-                        <h3 class="product-name">Iphone 12</h3>
-                        <p class="product-price">Rwf 6000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 12', 'Rwf 6000')">Order Now 💖</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="iphone 11 pro(2).jpeg" alt="Iphone 11 Pro" style="width: px;%; border-radius:10px;"> 
-                        <h3 class="product-name">Iphone 11 Pro</h3>
-                        <p class="product-price">Rwf 6000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 11 Pro', 'Rwf 6000')">Order Now 💖</button>
-                    </div>
-                     <div class="product-card">
-                        <img src="iphone 12 pro max(2).jpeg" alt="Iphone 12 Pro Max" style="width: px;%; border-radius:10px;"> 
-                        <h3 class="product-name">Iphone 12 Pro Max</h3>
-                        <p class="product-price">Rwf 5000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 12 Pro Max', 'Rwf 5000')">Order Now 💖</button>
-                    </div>
-                    <div class="product-card">
-                        <img src="iphone 11.jpeg" alt="Iphone 11" style="width: px;%; border-radius:10px;"> 
-                        <h3 class="product-name">Iphone 11</h3>
-                        <p class="product-price">Rwf 6000</p>
-                        <button class="order-btn" onclick="orderProduct('Iphone 11', 'Rwf 6000')">Order Now 💖</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Profile Section -->
-    <section id="profile" class="page-section">
-        <div class="profile-section">
-            <div class="profile-container">
-                <<img src="iphone 11.jpeg" alt="Iphone 11" style="width: px;%; border-radius:10px;"> 
-                <h2 class="section-title">About Glamour Cases</h2>
-                <p style="font-size: 1.2rem; line-height: 1.8; color: #666; margin-bottom: 2rem;">
-                    Welcome to Glamour Cases! We offer beautiful and elegant iPhone cases specially designed for girls who love style and sophistication.
-                </p>
-                <p style="font-size: 1.1rem; color: #888;">
-                    ✨ Affordable & Beautiful phone cases<br>
-                    💕 Designed with Love<br>
-                    🌟 Stylish & Unique Designs<br>
-                    💎 No Free Delivery
-        </div>
-    </section>
-    
-    <!-- Login Section -->
-    <section id="login" class="page-section">
-        <div class="login-section">
-            <div class="login-container">
-                <h2 class="section-title">Join Our Community 💕</h2>
-                <form id="loginForm">
-                    <div class="form-group">
-                        <label for="name">Full Name ✨</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="email">Email Address 💌</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="phone">Phone Number 📱</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    
-                    <div class="form-group">
-                        <label for="message">Special Requests 💭</label>
-                        <input type="text" id="message" name="message" placeholder="Any special requests or preferences?">
-                    </div>
-                    
-                    <button type="submit" class="submit-btn">Join Now 🌟</button>
-                </form>
-            </div>
-        </div>
-    </section>
-    
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2025 Glamour Cases. Made with 💕 for beautiful girls everywhere!</p>
-    </footer>
-    
-    <script>
-        // Navigation functionality
-        function showSection(sectionName) {
-            // Hide all sections
-            const sections = document.querySelectorAll('.page-section');
-            sections.forEach(section => {
-                section.classList.remove('active');
-            });
-            
-            // Show selected section
-            document.getElementById(sectionName).classList.add('active');
-        }
-        
-        // WhatsApp order functionality
-        function orderProduct(productName, price) {
-            const phoneNumber = "+250794909806"; // Replace with your actual WhatsApp number
-            const message = `Hi! I would like to order the ${productName} for ${price}. Please let me know about availability and shipping details! 💕`;
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
-            window.open(whatsappUrl, '_blank');
-        }
-        
-        // Login form submission
-        document.getElementById('loginForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const phone = document.getElementById('phone').value;
-            const message = document.getElementById('message').value;
-            
-            const phoneNumber = "+250794909806"; // Replace with your actual WhatsApp number
-            const whatsappMessage = `Hello! New customer registration:\n\nName: ${name}\nEmail: ${email}\nPhone: ${phone}\nSpecial Requests: ${message || 'None'}\n\nThank you! 💕`;
-            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
-            
-            window.open(whatsappUrl, '_blank');
-            
-            // Reset form
-            this.reset();
-            alert('Thank you for joining! We\'ll contact you soon via WhatsApp! 💕');
-        });
-        
-        // Floating hearts animation
-        function createHeart() {
-            const heart = document.createElement('div');
-            heart.className = 'heart';
-            heart.innerHTML = '💕';
-            heart.style.left = Math.random() * 100 + 'vw';
-            heart.style.animationDuration = (Math.random() * 3 + 2) + 's';
-            document.getElementById('floating-hearts').appendChild(heart);
-            
-            setTimeout(() => {
-                heart.remove();
-            }, 5000);
-        }
-        
-        // Create hearts periodically
-        setInterval(createHeart, 3000);
-        
-        // Smooth scrolling for navigation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-        
-        // Add sparkle effect on mouse move
-        document.addEventListener('mousemove', function(e) {
-            if (Math.random() > 0.98) {
-                const sparkle = document.createElement('div');
-                sparkle.innerHTML = '✨';
-                sparkle.style.position = 'fixed';
-                sparkle.style.left = e.clientX + 'px';
-                sparkle.style.top = e.clientY + 'px';
-                sparkle.style.pointerEvents = 'none';
-                sparkle.style.zIndex = '9999';
-                sparkle.style.fontSize = '12px';
-                sparkle.style.animation = 'fadeOut 1s forwards';
-                document.body.appendChild(sparkle);
-                
-                setTimeout(() => sparkle.remove(), 1000);
-            }
-        });
-        
-        // Add CSS for sparkle fadeout
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes fadeOut {
-                0% { opacity: 1; transform: scale(1); }
-                100% { opacity: 0; transform: scale(0.5) translateY(-20px); }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
-</body>
-</html>
+                        <img src="images/iphone 12 pro.jpeg" alt="iPhone 12 Pro" onerror="this.src='data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAwIiBoZWlnaHQ9IjIwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjBmMGYwIi8+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZvbnQtZmFtaWx5PSJBcmlhbCIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzk5OSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPmlQaG9uZSAxMiBQ
